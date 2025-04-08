@@ -7,11 +7,11 @@
          <p>Phone Number <input type = "text" name = "Phone Number" /></p>
          <p>Message <input type ="text" name = "Message" /></p>
 
-          Subject <SELECT name="subject">
-            {% for c in subjectList %}
-                <OPTION value={{c.subject_id}}>{{c.subject_name}}</option>
-            {% endfor %}
-          </SELECT>
+          Subject <select name="cars" id="cars">
+              <option value="General Inquiry">General Inquiry</option>
+              <option value="Support">Support</option>
+              <option value="Request">Request</option>
+          </select>
 
           <h2>Preferred Contact Method</h2>
           <p>Email: <input type="checkbox" name="match-with-pairs"/></p>
