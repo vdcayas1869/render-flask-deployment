@@ -7,7 +7,7 @@
          <p>Phone Number <input type = "text" name = "Phone Number" /></p>
          <p>Message <input type ="text" name = "Message" /></p>
 
-          Subject<SELECT name="subject">
+          Subject <SELECT name="subject">
             {% for c in subjectList %}
                 <OPTION value={{c.subject_id}}>{{c.subject_name}}</option>
             {% endfor %}
