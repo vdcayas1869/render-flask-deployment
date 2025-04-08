@@ -1,7 +1,7 @@
-from flask import Flask, redirect, url_for, request
+from flask import Flask, render_template
 app = Flask(__name__)
 
-@app.route("/home", methods=['POST', 'GET'])
+@app.route("/", methods=["POST"])
 def home():
     return render_template("<h1>Welcome to the USER contact Form</h1>")
 
