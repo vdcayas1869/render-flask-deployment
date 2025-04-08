@@ -5,10 +5,10 @@ app = Flask(__name__)
 def student():
    return render_template('contact_form.html')
 
-@app.route('/result',methods = ['POST', 'GET'])
-def result():
+@app.route('/confirmation',methods = ['POST', 'GET'])
+def confirmation():
    if request.method == 'POST':
-      result = request.form
+      confirmation = request.form
       return render_template("confirmation.html",confirmation = confirmation)
 
 if __name__ == '__main__':
