@@ -5,13 +5,14 @@
          <p>Email <input type = "text" name = "Email" /></p>
          <p>Phone Number <input type = "text" name = "Phone Number" /></p>
          <p>Message <input type ="text" name = "Message" /></p>
-         <p>Subject <input type ="text" name = "Subject" /></p>
 
           Subject<SELECT name="subject">
             {% for c in subjectList %}
                 <OPTION value={{c.subject_id}}>{{c.subject_name}}</option>
             {% endfor %}
           </SELECT>
+
+          <input type="checkbox" name="match-with-pairs"/>
 
          <p><input type = "submit" value = "submit" /></p>
       </form>
