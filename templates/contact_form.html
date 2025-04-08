@@ -7,11 +7,12 @@
          <p>Message <input type ="text" name = "Message" /></p>
          <p>Subject <input type ="text" name = "Subject" /></p>
 
-          Choose a City<SELECT name="city">
-            {% for c in cityList %}
-                <OPTION value={{c.city_id}}>{{c.city_name}}</option>
+          <select name="colour" method="GET" action="/">
+            <option value="{{colours[0]}}" selected>{{colours[0]}}</option>
+            {% for colour in colours[1:] %}
+            <option value="{{colour}}">{{colour}}</option>
             {% endfor %}
-          </SELECT>
+            </select>
 
          <p><input type = "submit" value = "submit" /></p>
       </form>
