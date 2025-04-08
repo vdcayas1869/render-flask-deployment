@@ -1,3 +1,5 @@
-Home website working along with the name/number input's also with the drop down option is working.
+All pages working.
+Input name and number Working.
 Checkbox is working.
-Submit button is working also but the connection to the submit page wont work.
+Submit button is working.
+3rd page didn't complete the code but it is still accessable.
