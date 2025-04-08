@@ -1,9 +1,18 @@
-from flask import Flask, render_template
+from flask import Flask, redirect, url_for, request
 app = Flask(__name__)
 
-@app.route("/", methods=["POST"])
-def home():
-    return render_template("<h1>Welcome to the USER contact Form</h1>")
+@app.route('/success/<name>')
+def success(name):
+   return 'welcome %s' % name
 
-if __name__ == "__main__":
-    app.run(debug == True)
+@app.route('/login',methods = ['POST', 'GET'])
+def login():
+   if request.method == 'POST':
+      user = request.form['nm']
+      return redirect(url_for('success',name = user))
+   else:
+      user = request.args.get('nm')
+      return redirect(url_for('success',name = user))
+
+if __name__ == '__main__':
+   app.run(debug = True)
